@@ -80,16 +80,16 @@ cd ~/Desktop
 # The "IoT.zip" file will contain 2 files "logo.png" and "IoT_Scanner.py"
 
 # Download the IoT Scanner
-git clone https://iot.zip && unzip IoT.zip
+git clone https://github.com/adamatasi/IoT_Scanner.git
 
 tput setaf 2; echo "Done"
 tput sgr0; echo ""
 
 # Change the directory to the downloaded folder
-cd cd ~/Desktop/IoT
+cd ~/Desktop/IoT_Scanner
 
 tput setaf 2; echo "Done"
 tput sgr0; echo ""
 
 # Running the script
-python3 test.py
+python3 IoT_Scanner.py
