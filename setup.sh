@@ -23,8 +23,8 @@ sudo pip3 install -r requirements.txt
 # install git (This will be used to download files from GitHub)
 sudo apt install git
 # Download the IoT Scanner
-#git clone https://iot.zip && unzip IoT.zip && python3 /backup/modules.py
+git clone https://iot.zip && unzip IoT.zip && python3 /backup/modules.py
 # Change the directory to the downloaded folder
-#cd /home/<user>/Downloads/IoT
+cd /home/<user>/Downloads/IoT
 # Running the script
-#python3 test.py
+python3 test.py
