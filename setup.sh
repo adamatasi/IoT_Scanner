@@ -88,8 +88,5 @@ tput sgr0; echo ""
 # Change the directory to the downloaded folder
 cd ~/Desktop/IoT_Scanner
 
-tput setaf 2; echo "Done"
-tput sgr0; echo ""
-
 # Running the script
 python3 IoT_Scanner.py
