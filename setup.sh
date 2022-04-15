@@ -90,7 +90,7 @@ tput setaf 2; echo "Done"
 tput sgr0; echo ""
 
 # Change the directory to the downloaded folder
-cd ~/Desktop/IoT_Scanner
+cd IoT_Scanner
 
 sleep 1
 tput setaf 2; echo "Setup has been completed"
