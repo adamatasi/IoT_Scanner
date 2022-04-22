@@ -63,6 +63,10 @@ sudo pip3 install pyfiglet
 tput setaf 2; echo "Done"
 tput sgr0; echo ""
 
+sudo pip3 install tkhtmlview
+tput setaf 2; echo "Done"
+tput sgr0; echo ""
+
 # Installing Tkinter (GUI)
 sudo apt-get install python3-tk
 tput setaf 2; echo "Done"
