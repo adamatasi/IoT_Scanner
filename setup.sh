@@ -35,6 +35,10 @@ tput sgr0; echo ""
 # install pip3
 sudo apt install python3-pip
 
+pip3 install shodan
+python3 -m pip install shodan
+python3 -m pip install nvdlib
+
 tput setaf 2; echo "Done"
 sleep 1
 tput sgr0; echo ""
