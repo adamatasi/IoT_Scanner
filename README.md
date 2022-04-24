@@ -129,10 +129,12 @@ With our IoT Tester, the user needs to install dependencies and modules for a su
 
 Step by Step instructions:
 
-https://youtu.be/6sr7vAXrZN4
-
 You can either watch the video to see how it's done OR follow the instructions below.
 
+Video Link:
+https://youtu.be/6sr7vAXrZN4
+
+Instructions:
 1- User needs to have our file "setup.sh".
 When running this file for the first time, it will install the latest system update (update the packages), Python3, Python-pip3, and some Python modules required to complete the scan and run our app.
 The modules include: Tkinter (used for the gui), bluetooth (to scan for Bluetooth devices), nvdlib (to get info about vulnerabilities and CVEs from the NVD Library).
