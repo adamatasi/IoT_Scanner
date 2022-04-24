@@ -169,8 +169,8 @@ The modules include: Tkinter (used for the gui), bluetooth (to scan for Bluetoot
 	- This is required because our email app created using Python and Python is considered as a third-party-app.
 	- Go to the following link https://myaccount.google.com/lesssecureapps > Sign in to your Google Account > Turn the option ON (Should be OFF by default) > Go back to the email app
 	
-	NOTE: We recommend to go back to https://myaccount.google.com/lesssecureapps and turn "less secure apps" OFF after sending the email.
-	NOTE: Our next version v2.0 will not ask the user to enter the "sender email address". User will have to enter the "receiver email address" only.
+		NOTE: We recommend to go back to https://myaccount.google.com/lesssecureapps and turn "less secure apps" OFF after sending the email.
+		NOTE: Our next version v2.0 will not ask the user to enter the "sender email address". User will have to enter the "receiver email address" only.
 	- Fill the form with your info:
 		. Email: The Google account that you used on the previous step.
 		. Password: The same Google account password.
