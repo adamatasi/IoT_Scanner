@@ -1,4 +1,4 @@
-IoT_Scanner
+#IoT_Scanner
 Step by Step instructions:
 
 You can either watch the video to see how it's done OR follow the instructions below.
