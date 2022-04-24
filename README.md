@@ -1,4 +1,7 @@
 # IoT_Scanner
+Instructions video:
+https://youtu.be/6sr7vAXrZN4
+
 
 Introduction:  
 
