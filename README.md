@@ -43,4 +43,4 @@ Instructions: 1- User needs to have our file "setup.sh". When running this file 
 
 13- THE NATIONAL VULNERABILITY DATABASE contains a list of all CVEs. Each CVE includes Details/Description, Severity, Solutions, and more.
 
-14- You can follow the solutions to secure that device.
+14- You can follow the solutions to secure that device
