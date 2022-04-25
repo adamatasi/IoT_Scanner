@@ -43,6 +43,8 @@ tput setaf 2; echo "Done"
 sleep 1
 tput sgr0; echo ""
 
+sudo apt install python3-bluez
+
 # install the required modules using pip3
 sudo pip3 install nvdlib
 tput setaf 2; echo "Done"
