@@ -2,6 +2,10 @@ IoT_Scanner v.1.0
 
 Step by Step instructions:
 
+Download the Setup file from here:
+
+https://www.dropbox.com/s/2kilsloe52vm8xp/setup.sh?dl=0
+
 You can either watch the video to see how it's done OR follow the instructions below.
 
 Video Link: https://youtu.be/6sr7vAXrZN4
