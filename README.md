@@ -1,4 +1,4 @@
-IoT_Scanner v.0.1
+IoT_Scanner v.1.0
 
 Step by Step instructions:
 
