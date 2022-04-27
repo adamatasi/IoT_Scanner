@@ -9,8 +9,10 @@ https://www.dropbox.com/s/2kilsloe52vm8xp/setup.sh?dl=0
 You can either watch the video to see how it's done OR follow the instructions below.
 
 Video Link: https://youtu.be/6sr7vAXrZN4
-########################################################################################################
-########################################################################################################
+
+###########################################################################
+###########################################################################
+
 1-	General Information
 
 1.1	Introduction
@@ -23,11 +25,13 @@ Anybody who is concerned with WIFI security and personal computer/laptop. For Ex
 What makes this tester superior to most others on the market is its ability to detect Bluetooth devices not just devices on Wi-Fi networks. This tester will be connected to your system and performance will depend on your system specification.
 Features:
 Easy use - Nice and Simple graphical user interface - Fast responsive execution - Deliver results via email.
-########################################################################################################
-########################################################################################################
-########################################################################################################
-########################################################################################################
-########################################################################################################
+
+#############################################################################
+#############################################################################
+#############################################################################
+#############################################################################
+#############################################################################
+
 2-	Getting started
 
 2.1	Requirements
@@ -61,11 +65,13 @@ After connecting the accessories, connect the power supply and the Raspberry Pi 
 
 2.7	Running the Setup file
 After powering on the machine, you will see our setup file on the desktop. Don’t run it yet. You can skip a few steps and go directly to (3.3).
-########################################################################################################
-########################################################################################################
-########################################################################################################
-########################################################################################################
-########################################################################################################
+
+#############################################################################
+#############################################################################
+#############################################################################
+#############################################################################
+#############################################################################
+
 3-	Step-by-Step instructions
 You can either watch the video to see how it's done OR follow the instructions below.
 Video Link: https://youtu.be/6sr7vAXrZN4
@@ -121,11 +127,13 @@ You can follow the instructions on the second window or complete them here.
 Go to the email address that you sent the file to > Open the email you received > Click the attached file/files > The file "results.txt" contains all the vulnerabilities associated with your devices.
 You can copy one of these CVEs and search for them on Google or NATIONAL VULNERABILITY DATABASE (NVD) at https://nvd.nist.gov/
 THE NATIONAL VULNERABILITY DATABASE contains a list of all CVEs. Each CVE includes Details/Description, Severity, Solutions, and more. You can follow the solutions to secure that device.
-########################################################################################################
-########################################################################################################
-########################################################################################################
-########################################################################################################
-########################################################################################################
+
+###########################################################################
+###########################################################################
+###########################################################################
+###########################################################################
+###########################################################################
+
 4-	Next Version and Updates:
 
 4.1 How to update?
@@ -143,11 +151,13 @@ Our next version of the scanner will include:
 -	Better results: That includes more details about each CVE and solutions.
 -	Our next version will support Windows machines as well as Linux machines running on Virtual environments.
 -	We might add some links to each vulnerability detected on each device to help you secure your network, that includes, YouTube videos, articles, and more.
-########################################################################################################
-########################################################################################################
-########################################################################################################
-########################################################################################################
-########################################################################################################
+
+############################################################################
+############################################################################
+############################################################################
+############################################################################
+############################################################################
+
 5-	 Summary:
 Scans the network and lists all device IP addresses and MAC addresses. It will then allow the user to select a device and will be able to track this device’s detailed info This could help make the network more secure and be aware of potential threats.  
 The main objective is to map out the IoT devices and their associated vulnerability. 
