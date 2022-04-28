@@ -103,30 +103,9 @@ Now, you can close the program by clicking “Exit Program” button.
 
 3.6	The Email App
 When you close the program, our email app will start. You will get two windows.
-The first window is the instructions in how to send an email using our email app, and the second window is the email app.
-You can follow the instructions on the second window or complete them here. 
- 
--	To be able to send emails via this app, you need to TURN ON "less secure apps" on your Google account.
-
--	Go to the following link https://myaccount.google.com/lesssecureapps
--	Sign into your Google Account.
--	Turn the option ON (Which should be OFF by default).
--	Go back to the email app.
-
--	Close the Instructions window and go back to the email app.
--	Fill out the form with your info
-		- Email: The Google account that you used in the previous step.
-		- Password: The same Google account password.
-		- To: The email address you are sending the file to.
-		- Subject: Any
-		- Body: Any
--	Click "Attach" and select the file "results.txt".
--	Click "Send"
-
-3.7	Checking your results
-Go to the email address that you sent the file to > Open the email you received > Click the attached file/files > The file "results.txt" contains all the vulnerabilities associated with your devices.
-You can copy one of these CVEs and search for them on Google or NATIONAL VULNERABILITY DATABASE (NVD) at https://nvd.nist.gov/
-THE NATIONAL VULNERABILITY DATABASE contains a list of all CVEs. Each CVE includes Details/Description, Severity, Solutions, and more. You can follow the solutions to secure that device.
+- In the box, type your email address that you want to send the results to.
+- Click on “Attach” – this will attach the results.txt file automatically.
+- Click on “Send”.
 
 ###########################################################################
 ###########################################################################
