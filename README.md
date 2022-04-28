@@ -1,4 +1,4 @@
-IoT_Scanner v.1.0
+IoT_Scanner v.1.1 (Email App has been updated)
 
 Step by Step instructions:
 
