@@ -102,6 +102,7 @@ When you click “Click here to see the results”, a second window will open, s
 Now, you can close the program by clicking “Exit Program” button.
 
 3.6	The Email App
+NOTE: We have updated the email app. You are no longer required to type the sender email and password. You can skip the EMAIL part on the video and continue here.
 When you close the program, our email app will start. You will get two windows.
 - In the box, type your email address that you want to send the results to.
 - Click on “Attach” – this will attach the results.txt file automatically.
