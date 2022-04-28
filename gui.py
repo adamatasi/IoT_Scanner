@@ -135,7 +135,7 @@ project.mainloop()
 
 
 
-# Email App
+# Email
 
 #Global variables
 attachments = []
@@ -146,37 +146,38 @@ iotEmail.title('Email App by ASA')
 
 #Functions
 def attachFile():
-    filename = filedialog.askopenfilename(initialdir='c:/',title='Please select a file')
+    filename = 'results.txt'
+    #filename = filedialog.askopenfilename(initialdir='c:/',title='Please select a file')
     attachments.append(filename)
     notif.config(fg='green', text = 'Attached ' + str(len(attachments)) + ' files')
     
 def send():
     try:
         msg      = EmailMessage()
-        username = temp_username.get()
-        password = temp_password.get()
+        username = 'asa.iot.scanner@gmail.com' 
+        password = 'Memo@#0941755793' 
         to       = temp_receiver.get()
-        subject  = temp_subject.get()
-        body     = temp_body.get()
+        subject  = 'scan result'
+        body     = 'Here is the report of the IoT scan'
         msg['subject'] = subject
         msg['from'] = username
         msg['to'] = to
         msg.set_content(body)
 
-        for filename in attachments:
-            filetype = filename.split('.')
-            filetype = filetype[1]
-            if filetype == "jpg" or filetype == "JPG" or filetype == "png" or filetype == "PNG":
-                import imghdr
-                with open(filename, 'rb') as f:
-                    file_data = f.read()
-                    image_type = imghdr.what(filename)
-                msg.add_attachment(file_data, maintype='image', subtype=image_type, filename=f.name)
+        filename = attachments[0]
+        filetype = filename.split('.')
+        filetype = filetype[1]
+        if filetype == "jpg" or filetype == "JPG" or filetype == "png" or filetype == "PNG":
+            import imghdr
+            with open(filename, 'rb') as f:
+                file_data = f.read()
+                image_type = imghdr.what(filename)
+            msg.add_attachment(file_data, maintype='image', subtype=image_type, filename=f.name)
 
-            else:
-                with open(filename, 'rb') as f:
-                    file_data = f.read()
-                msg.add_attachment(file_data, maintype='application', subtype='octet-stream', filename=f.name)
+        else:
+            with open(filename, 'rb') as f:
+                file_data = f.read()
+            msg.add_attachment(file_data, maintype='application', subtype='octet-stream', filename=f.name)
         
         if username=="" or password=="" or to=="" or subject=="" or body=="":
             notif.config(text="All fields required", fg="red")
@@ -191,96 +192,49 @@ def send():
         notif.config(text="Error sending email", fg="red")
 
 
-def reset():
-    usernameEntry.delete(0,'end')
-    passwordEntry.delete(0,'end')
-    receiverEntry.delete(0,'end')
-    subjectEntry.delete(0,'end')
-    bodyEntry.delete(0,'end')
+#def reset():
+#  usernameEntry.delete(0,'end')
+#  passwordEntry.delete(0,'end')
+#  receiverEntry.delete(0,'end')
+#  subjectEntry.delete(0,'end')
+#  bodyEntry.delete(0,'end')
 
 #Labels
-Label(iotEmail, text="Welcome to our email app", font=('Calibri',16)).grid(row=0, sticky=N)
-Label(iotEmail, text="Please use the form below to send an email",
-      font=('Calibri',11)).grid(row=1, sticky=N, padx=5 ,pady=10)
+Label(iotEmail, text="Welcome to our email app", font=('Calibri',15)).grid(row=0, sticky=N)
+Label(iotEmail, text="1- Type your email address", font=('Calibri',11)).grid(row=1, sticky=W, padx=5 ,pady=10)
+Label(iotEmail, text="2- Click Attach", font=('Calibri',11)).grid(row=2, sticky=W, padx=5 ,pady=10)
+Label(iotEmail, text="3- Click Send", font=('Calibri',11)).grid(row=3, sticky=W, padx=5 ,pady=10)
 
-Label(iotEmail, text="Email", font=('Calibri', 11)).grid(row=2,sticky=W, padx=5)
-Label(iotEmail, text="Password", font=('Calibri', 11)).grid(row=3,sticky=W, padx=5)
-Label(iotEmail, text="To", font=('Calibri', 11)).grid(row=4,sticky=W, padx=5)
-Label(iotEmail, text="Subject", font=('Calibri', 11)).grid(row=5,sticky=W, padx=5)
-Label(iotEmail, text="Body", font=('Calibri', 11)).grid(row=6,sticky=W, padx=5)
+#Label(iotEmail, text="Email", font=('Calibri', 11)).grid(row=2,sticky=W, padx=5)
+#Label(iotEmail, text="Password", font=('Calibri', 11)).grid(row=3,sticky=W, padx=5)
+Label(iotEmail, text="Email", font=('Calibri', 11)).grid(row=4,sticky=W, padx=5)
+#Label(iotEmail, text="Subject", font=('Calibri', 11)).grid(row=5,sticky=W, padx=5)
+#Label(iotEmail, text="Body", font=('Calibri', 11)).grid(row=6,sticky=W, padx=5)
 notif = Label(iotEmail, text="", font=('Calibri', 11),fg="red")
 notif.grid(row=7,sticky=S)
 
 #Storage
-temp_username = StringVar()
-temp_password = StringVar()
+temp_username = StringVar() #'asa.iot.scanner@gmail.com' 
+temp_password = StringVar() #'Memo@#0941755793' 
 temp_receiver = StringVar()
 temp_subject  = StringVar()
 temp_body     = StringVar()
 
 #Entries
-#The sender's email box
-usernameEntry = Entry(iotEmail, textvariable = temp_username)
-usernameEntry.grid(row=2,column=0, sticky=N)
-#The sender's password box
-passwordEntry = Entry(iotEmail, show="*", textvariable = temp_password)
-passwordEntry.grid(row=3,column=0, sticky=N)
-#The receiver box
+#usernameEntry = Entry(iotEmail, textvariable = temp_username)
+#usernameEntry.grid(row=2,column=0)
+#passwordEntry = Entry(iotEmail, show="*", textvariable = temp_password)
+#passwordEntry.grid(row=3,column=0)
 receiverEntry  = Entry(iotEmail, textvariable = temp_receiver)
-receiverEntry.grid(row=4,column=0, sticky=N)
-#The subject box
-subjectEntry  = Entry(iotEmail, textvariable = temp_subject)
-subjectEntry.grid(row=5,column=0, sticky=N)
-#The body box
-bodyEntry     = Entry(iotEmail, textvariable = temp_body)
-bodyEntry.grid(row=6,column=0, sticky=N)
+receiverEntry.grid(row=4,column=0)
+#subjectEntry  = Entry(iotEmail, textvariable = temp_subject)
+#subjectEntry.grid(row=5,column=0)
+#bodyEntry     = Entry(iotEmail, textvariable = temp_body)
+#bodyEntry.grid(row=6,column=0)
 
 #Buttons
-Button(iotEmail, text = "Attach", command = attachFile).grid(row=8, sticky=W,  padx=5, pady=5)
-Button(iotEmail, text = "Send", command = send).grid(row=8, sticky=N, pady=5, padx=5)
-Button(iotEmail, text = "Reset", command = reset).grid(row=8, sticky=E, padx=15, pady=5)
-Button(iotEmail, text = "Close", command = iotEmail.destroy).grid(row=10, sticky=N,  padx=130, pady=5)
-
-
-#Instructions
-Instructions = Toplevel()
-
-w1 = Label(Instructions, text="Instructions", font=('Calibri',20)).grid(row=0, sticky=N, pady=5, padx=5)
-
-w2 = Label(Instructions, text=" In order to use the email app, \
-you need to allow 'less secure apps' in your Google account (Use this email as a sender)",
-           font=('Calibri',14)).grid(row=1, sticky=N, pady=5, padx=5)
-
-w3 = Label(Instructions, text=" login to your Google account and go to: ",
-           font=('Calibri',14)).grid(row=2, sticky=N, pady=5, padx=5)
-
-w4 = Label(Instructions, text="https://myaccount.google.com/lesssecureapps",
-           font=('Calibri',14)).grid(row=4, sticky=N, pady=5, padx=5)
-
-w5 = Label(Instructions, text="OR right click your Google account picture > Manage your Google account \n \
-Security > Less secure app access > Turn ON",font=('Calibri',14)).grid(row=5, sticky=N, pady=5, padx=5)
-
-w6 = Label(Instructions, text="OR click the link BELOW",
-           font=('Calibri',14)).grid(row=6, sticky=N, pady=5, padx=5)
-
-w7 = Label(Instructions, text="Now go to the Email App", font=('Calibri',14)).grid(row=7, sticky=N, pady=5, padx=5)
-
-w8 = Label(Instructions, text="1. Attach the file 'results.txt'", font=('Calibri',14)).grid(row=8, sticky=N, pady=5, padx=5)
-
-w9 = Label(Instructions, text="2. Fill the form with your info", font=('Calibri',14)).grid(row=9, sticky=N, pady=5, padx=5)
-
-w10 = Label(Instructions, text="3. Click 'Send'", font=('Calibri',14)).grid(row=10, sticky=N)
-
-w11 = Label(Instructions, text="\n", font=('Calibri',14)).grid(row=11, sticky=N)
-
-w12 = Label(Instructions, text="Click the LINK below to access your Google Account", font=('Calibri',16)).grid(row=12, sticky=N)
-
-html_label=HTMLLabel(Instructions,
-                     html='<a href="https://myaccount.google.com/lesssecureapps"> LINK',
-                     font=('Calibri',1)).grid(row=13, sticky=N)
-
-Button(Instructions, text = "Close Instructions",
-       command = Instructions.destroy).grid(row=14, sticky=N,  padx=130, pady=5)
-
-#Mainloop
+Button(iotEmail, text = "Send", command = send).grid(row=7,   sticky=W,  pady=15, padx=5)
+#Button(iotEmail, text = "Reset", command = reset).grid(row=7,  sticky=W,  padx=65, pady=40)
+Button(iotEmail, text = "Attach", command = attachFile).grid(row=7,  sticky=W,  padx=130, pady=40)
+#Button(iotEmail, text = "exit", command=project.destroy).grid(row=7,   sticky=W,  pady=15, padx=5)
 iotEmail.mainloop()
