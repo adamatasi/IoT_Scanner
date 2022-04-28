@@ -1,5 +1,7 @@
 IoT_Scanner v.1.1 (Email App has been updated)
 
+NOTE: This scanner does not work on Windows machines or on Linux systems running on VMs. The scanner has been tested on Raspberry pi 0, 3, and 4 only.
+
 Step by Step instructions:
 
 Download the Setup file from here:
@@ -9,6 +11,8 @@ https://www.dropbox.com/s/2kilsloe52vm8xp/setup.sh?dl=0
 You can either watch the video to see how it's done OR follow the instructions below.
 
 Video Link: https://youtu.be/6sr7vAXrZN4
+
+NOTE: Skip the email part from the video as we have updated our email app (GO to 3.6).
 
 ###########################################################################
 ###########################################################################
